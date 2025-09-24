@@ -5,271 +5,466 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Western Show Ready — Bespoke Western Show Shirts & Blankets</title>
   <meta name="description" content="One-of-a-kind Western show shirts, ranch & trail shirts, and woven show blankets. Handmade in Hampshire, UK." />
-  <meta property="og:title" content="Western Show Ready" />
-  <meta property="og:description" content="Custom cowgirl. One of a kind. Bespoke show shirts & blankets." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="theme-color" content="#1a1a1a" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root { --wsr-bg: #fafafa; --wsr-ink: #0a0a0a; }
-    html,body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
-    .glass { backdrop-filter: saturate(180%) blur(10px); background-color: rgba(255,255,255,.85); }
+    :root{
+      --bg:#FFF8F1;
+      --ink:#1A1A1A;
+      --muted:#5E5E5E;
+      --line:#EEE1D3;
+      --accent:#B38A44;
+      --accent-dark:#8A6B34;
+      --card:#FFFFFF;
+    }
+    html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; color:var(--ink);}
+    .btn{display:inline-block; padding:.7rem 1.1rem; border-radius:1rem; font-weight:600;}
+    .btn-primary{background:var(--accent); color:#fff; border:1px solid var(--accent);}
+    .btn-primary:hover{background:var(--accent-dark);}
+    .btn-ghost{border:1px solid var(--line);}
+    .card{background:var(--card); border:1px solid var(--line); border-radius:1.1rem;}
+    .nav{backdrop-filter:saturate(180%) blur(10px); background-color:rgba(255,255,255,.82); border-bottom:1px solid var(--line);}
+    .section{padding:4rem 1rem;}
+    .container{max-width:72rem; margin:0 auto;}
+    .kicker{color:var(--accent); font-weight:700; letter-spacing:.06em; text-transform:uppercase; font-size:.8rem;}
+    .muted{color:var(--muted);}
+    .soft-border{border-color:var(--line);}
+    @font-face{
+      font-family:"Brock Script";
+      src:url("brock.woff2") format("woff2");
+      font-weight:400; font-style:normal; font-display:swap;
+    }
+    .logo-font{font-family:"Brock Script", cursive;}
   </style>
 </head>
-<body class="min-h-screen bg-neutral-50 text-neutral-900">
-  <!-- NAVBAR -->
-  <header class="sticky top-0 z-50 border-b glass">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-3">
+<body class="min-h-screen" style="background:var(--bg);">
+<header class="nav sticky top-0 z-50">
+  <div class="container px-4 py-3 flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-3">
       <img src="logo.png" alt="Western Show Ready logo" class="w-12 h-12 object-contain" />
-        <div>
-          <p class="text-xl font-semibold tracking-tight">Western Show Ready</p>
-          <p class="text-xs text-neutral-600 -mt-1">Custom cowgirl. One of a kind.</p>
-        </div>
-      </a>
-      <nav class="hidden md:flex items-center gap-6">
-        <a href="#home" class="text-sm hover:text-neutral-600">Home</a>
-        <a href="#about" class="text-sm hover:text-neutral-600">About</a>
-        <a href="#shop" class="text-sm hover:text-neutral-600">Shop</a>
-        <a href="#gallery" class="text-sm hover:text-neutral-600">Gallery</a>
-        <a href="#prices" class="text-sm hover:text-neutral-600">Prices</a>
-        <a href="#contact" class="px-4 py-2 rounded-2xl shadow-sm bg-neutral-900 text-white text-sm">Enquire</a>
-      </nav>
-      <button id="menuBtn" class="md:hidden p-2 rounded-xl border" aria-expanded="false" aria-controls="mnav">
-        <span class="sr-only">Toggle menu</span>☰
-      </button>
+      <div>
+        <p class="text-xl logo-font" style="font-size:2rem; line-height:1;">Western Show Ready</p>
+        <p class="text-xs muted -mt-1">Custom cowgirl. One of a kind.</p>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-6">
+      <a href="#home" class="text-sm">Home</a>
+      <a href="#about" class="text-sm">About</a>
+      <a href="#shop" class="text-sm">Shop</a>
+      <a href="#gallery" class="text-sm">Gallery</a>
+      <a href="#prices" class="text-sm">Prices</a>
+      <a href="#contact" class="btn btn-primary text-sm">Enquire</a>
+    </nav>
+  </div>
+</header>
+
+<section id="home" class="section">
+  <div class="container grid lg:grid-cols-2 gap-10 items-center px-4">
+    <div>
+      <div class="kicker">Made in Hampshire</div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight mt-2 logo-font" style="font-weight:600;">Bespoke Western show shirts & woven blankets</h1>
+      <p class="mt-4 text-lg muted">One-of-a-kind looks for reining, ranch & cow work — plus everyday trail style.</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="#shop" class="btn btn-primary">View styles</a>
+        <a href="#contact" class="btn btn-ghost">Custom enquiry</a>
+      </div>
+      <ul class="mt-6 text-sm muted grid gap-1">
+        <li>• Hand-finished crystals & detailing</li>
+        <li>• Matching neck ties & accessories</li>
+        <li>• UK-wide shipping · Show pickup available</li>
+      </ul>
     </div>
-    <div id="mnav" class="hidden md:hidden border-t">
-      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2">
-        <a href="#home" class="py-2">Home</a>
-        <a href="#about" class="py-2">About</a>
-        <a href="#shop" class="py-2">Shop</a>
-        <a href="#gallery" class="py-2">Gallery</a>
-        <a href="#prices" class="py-2">Prices</a>
-        <a href="#contact" class="px-4 py-2 rounded-xl shadow-sm bg-neutral-900 text-white text-center">Enquire</a>
+    <div class="relative">
+      <div class="card overflow-hidden">
+        <img src="assets/hero.jpg" alt="Show blanket and shirt hero" class="w-full object-cover" />
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- HERO -->
-  <section id="home" class="relative">
-    <div class="max-w-6xl mx-auto px-4 py-20 lg:py-28 grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-          Bespoke Western show shirts & blankets — made in Hampshire
-        </h1>
-        <p class="mt-4 text-neutral-600 text-lg">
-          One-of-a-kind looks for reining, ranch & cow work — plus everyday trail style.
-        </p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#shop" class="px-5 py-3 rounded-2xl bg-neutral-900 text-white shadow">View styles</a>
-          <a href="#contact" class="px-5 py-3 rounded-2xl border">Custom enquiry</a>
+<section id="about" class="section" style="background:white; border-top:1px solid var(--line);">
+  <div class="container grid lg:grid-cols-2 gap-10 items-start px-4">
+    <div>
+      <div class="kicker">About</div>
+      <h2 class="text-3xl font-bold logo-font" style="font-weight:600;">Made to measure. Built to perform.</h2>
+      <p class="mt-4 muted">Western Show Ready creates bespoke show shirts, woven show blankets and ranch pieces for riders across the UK. Not all our clients compete — many just love Western style for trail riding and events.</p>
+      <p class="mt-3 muted">We can customise existing shirts, upcycle statement pieces, and design looks for shoots at Worlds End Western Club or your chosen venue.</p>
+      <div class="mt-6 flex gap-3">
+        <a href="#gallery" class="btn btn-ghost">See gallery</a>
+        <a href="#contact" class="btn btn-primary">Start a custom</a>
+      </div>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="card p-5"><h3 class="font-semibold">Bespoke Show Shirts</h3><p class="text-sm mt-2 muted">Handmade, one-of-a-kind pieces.</p></div>
+      <div class="card p-5"><h3 class="font-semibold">Ranch & Trail Shirts</h3><p class="text-sm mt-2 muted">Durable with show-ready detail.</p></div>
+      <div class="card p-5"><h3 class="font-semibold">Show Blankets</h3><p class="text-sm mt-2 muted">Colourways to match your outfit.</p></div>
+      <div class="card p-5"><h3 class="font-semibold">Accessories</h3><p class="text-sm mt-2 muted">Scarves & matching ties.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="shop" class="section" style="border-top:1px solid var(--line);">
+  <div class="container px-4">
+    <div class="flex items-end justify-between">
+      <h2 class="text-3xl font-bold logo-font" style="font-weight:600;">Shop</h2>
+      <p class="text-sm muted">Secure checkout via PayPal</p>
+    </div>
+    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+    <article class="card overflow-hidden">
+      <img src="assets/product-1.jpg" alt="Felt Blanket" class="w-full object-cover" />
+      <div class="p-5">
+        <h3 class="font-semibold">Felt Blanket</h3>
+        <div class="mt-1 muted">£200.00</div>
+        <div class="mt-3 flex items-center justify-between gap-3 flex-wrap">
+          <a href="#contact" class="text-sm underline">Enquire</a>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="katiejhazzard@gmail.com">
+            <input type="hidden" name="item_name" value="Felt Blanket">
+            <input type="hidden" name="amount" value="200.00">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="submit" value="Buy Now" class="btn btn-primary">
+          </form>
         </div>
-        <ul class="mt-6 text-sm text-neutral-600 grid gap-1">
-          <li>• Hand-finished crystals & detailing</li>
-          <li>• Matching neck ties & accessories</li>
-          <li>• UK-wide shipping · Show pickup available</li>
+      </div>
+    </article>
+    
+    <article class="card overflow-hidden">
+      <img src="assets/product-2.jpg" alt="Ranch Blanket" class="w-full object-cover" />
+      <div class="p-5">
+        <h3 class="font-semibold">Ranch Blanket</h3>
+        <div class="mt-1 muted">£250.00</div>
+        <div class="mt-3 flex items-center justify-between gap-3 flex-wrap">
+          <a href="#contact" class="text-sm underline">Enquire</a>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="katiejhazzard@gmail.com">
+            <input type="hidden" name="item_name" value="Ranch Blanket">
+            <input type="hidden" name="amount" value="250.00">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="submit" value="Buy Now" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card overflow-hidden">
+      <img src="assets/product-3.jpg" alt="Contoured 2-in-1 Blanket" class="w-full object-cover" />
+      <div class="p-5">
+        <h3 class="font-semibold">Contoured 2-in-1 Blanket</h3>
+        <div class="mt-1 muted">£300.00</div>
+        <div class="mt-3 flex items-center justify-between gap-3 flex-wrap">
+          <a href="#contact" class="text-sm underline">Enquire</a>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="katiejhazzard@gmail.com">
+            <input type="hidden" name="item_name" value="Contoured 2-in-1 Blanket">
+            <input type="hidden" name="amount" value="300.00">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="submit" value="Buy Now" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card overflow-hidden">
+      <img src="assets/product-4.jpg" alt="Show Blanket" class="w-full object-cover" />
+      <div class="p-5">
+        <h3 class="font-semibold">Show Blanket</h3>
+        <div class="mt-1 muted">£250.00</div>
+        <div class="mt-3 flex items-center justify-between gap-3 flex-wrap">
+          <a href="#contact" class="text-sm underline">Enquire</a>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="katiejhazzard@gmail.com">
+            <input type="hidden" name="item_name" value="Show Blanket">
+            <input type="hidden" name="amount" value="250.00">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="submit" value="Buy Now" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card overflow-hidden">
+      <img src="assets/product-5.jpg" alt="Pullover (Plain)" class="w-full object-cover" />
+      <div class="p-5">
+        <h3 class="font-semibold">Pullover (Plain)</h3>
+        <div class="mt-1 muted">£90.00</div>
+        <div class="mt-3 flex items-center justify-between gap-3 flex-wrap">
+          <a href="#contact" class="text-sm underline">Enquire</a>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="katiejhazzard@gmail.com">
+            <input type="hidden" name="item_name" value="Pullover (Plain)">
+            <input type="hidden" name="amount" value="90.00">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="submit" value="Buy Now" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card overflow-hidden">
+      <img src="assets/product-6.jpg" alt="Pullover Shirt - Heavy Crystals" class="w-full object-cover" />
+      <div class="p-5">
+        <h3 class="font-semibold">Pullover Shirt - Heavy Crystals</h3>
+        <div class="mt-1 muted">£220.00</div>
+        <div class="mt-3 flex items-center justify-between gap-3 flex-wrap">
+          <a href="#contact" class="text-sm underline">Enquire</a>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="katiejhazzard@gmail.com">
+            <input type="hidden" name="item_name" value="Pullover Shirt - Heavy Crystals">
+            <input type="hidden" name="amount" value="220.00">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="submit" value="Buy Now" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card overflow-hidden">
+      <img src="assets/product-7.jpg" alt="Taffeta Show Shirt (Plain)" class="w-full object-cover" />
+      <div class="p-5">
+        <h3 class="font-semibold">Taffeta Show Shirt (Plain)</h3>
+        <div class="mt-1 muted">£90.00</div>
+        <div class="mt-3 flex items-center justify-between gap-3 flex-wrap">
+          <a href="#contact" class="text-sm underline">Enquire</a>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="katiejhazzard@gmail.com">
+            <input type="hidden" name="item_name" value="Taffeta Show Shirt (Plain)">
+            <input type="hidden" name="amount" value="90.00">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="submit" value="Buy Now" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card overflow-hidden">
+      <img src="assets/product-8.jpg" alt="Taffeta with Crystals (Front/Cuff/Collar)" class="w-full object-cover" />
+      <div class="p-5">
+        <h3 class="font-semibold">Taffeta with Crystals (Front/Cuff/Collar)</h3>
+        <div class="mt-1 muted">£170.00</div>
+        <div class="mt-3 flex items-center justify-between gap-3 flex-wrap">
+          <a href="#contact" class="text-sm underline">Enquire</a>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="katiejhazzard@gmail.com">
+            <input type="hidden" name="item_name" value="Taffeta with Crystals (Front/Cuff/Collar)">
+            <input type="hidden" name="amount" value="170.00">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="submit" value="Buy Now" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card overflow-hidden">
+      <img src="assets/product-9.jpg" alt="Taffeta Show Shirt - Heavy Crystals with Swirls" class="w-full object-cover" />
+      <div class="p-5">
+        <h3 class="font-semibold">Taffeta Show Shirt - Heavy Crystals with Swirls</h3>
+        <div class="mt-1 muted">£220.00</div>
+        <div class="mt-3 flex items-center justify-between gap-3 flex-wrap">
+          <a href="#contact" class="text-sm underline">Enquire</a>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="katiejhazzard@gmail.com">
+            <input type="hidden" name="item_name" value="Taffeta Show Shirt - Heavy Crystals with Swirls">
+            <input type="hidden" name="amount" value="220.00">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="submit" value="Buy Now" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card overflow-hidden">
+      <img src="assets/product-10.jpg" alt="Plain Ranch Shirt" class="w-full object-cover" />
+      <div class="p-5">
+        <h3 class="font-semibold">Plain Ranch Shirt</h3>
+        <div class="mt-1 muted">£100.00</div>
+        <div class="mt-3 flex items-center justify-between gap-3 flex-wrap">
+          <a href="#contact" class="text-sm underline">Enquire</a>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="katiejhazzard@gmail.com">
+            <input type="hidden" name="item_name" value="Plain Ranch Shirt">
+            <input type="hidden" name="amount" value="100.00">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="submit" value="Buy Now" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card overflow-hidden">
+      <img src="assets/product-11.jpg" alt="Ranch Shirt with Contrasting Cuff/Collar" class="w-full object-cover" />
+      <div class="p-5">
+        <h3 class="font-semibold">Ranch Shirt with Contrasting Cuff/Collar</h3>
+        <div class="mt-1 muted">£120.00</div>
+        <div class="mt-3 flex items-center justify-between gap-3 flex-wrap">
+          <a href="#contact" class="text-sm underline">Enquire</a>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="katiejhazzard@gmail.com">
+            <input type="hidden" name="item_name" value="Ranch Shirt with Contrasting Cuff/Collar">
+            <input type="hidden" name="amount" value="120.00">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="submit" value="Buy Now" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card overflow-hidden">
+      <img src="assets/product-12.jpg" alt="Ranch Shirt with Fringe" class="w-full object-cover" />
+      <div class="p-5">
+        <h3 class="font-semibold">Ranch Shirt with Fringe</h3>
+        <div class="mt-1 muted">£150.00</div>
+        <div class="mt-3 flex items-center justify-between gap-3 flex-wrap">
+          <a href="#contact" class="text-sm underline">Enquire</a>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="katiejhazzard@gmail.com">
+            <input type="hidden" name="item_name" value="Ranch Shirt with Fringe">
+            <input type="hidden" name="amount" value="150.00">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="submit" value="Buy Now" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card overflow-hidden">
+      <img src="assets/product-13.jpg" alt="Cotton Show Shirt" class="w-full object-cover" />
+      <div class="p-5">
+        <h3 class="font-semibold">Cotton Show Shirt</h3>
+        <div class="mt-1 muted">£90.00</div>
+        <div class="mt-3 flex items-center justify-between gap-3 flex-wrap">
+          <a href="#contact" class="text-sm underline">Enquire</a>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="katiejhazzard@gmail.com">
+            <input type="hidden" name="item_name" value="Cotton Show Shirt">
+            <input type="hidden" name="amount" value="90.00">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="submit" value="Buy Now" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card overflow-hidden">
+      <img src="assets/product-14.jpg" alt="Scarf" class="w-full object-cover" />
+      <div class="p-5">
+        <h3 class="font-semibold">Scarf</h3>
+        <div class="mt-1 muted">£20.00</div>
+        <div class="mt-3 flex items-center justify-between gap-3 flex-wrap">
+          <a href="#contact" class="text-sm underline">Enquire</a>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="katiejhazzard@gmail.com">
+            <input type="hidden" name="item_name" value="Scarf">
+            <input type="hidden" name="amount" value="20.00">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="submit" value="Buy Now" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </article>
+    
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section" style="background:white; border-top:1px solid var(--line);">
+  <div class="container px-4">
+    <h2 class="text-3xl font-bold logo-font" style="font-weight:600;">Gallery</h2>
+    <p class="mt-2 muted">Looks from AQHA UK Breed Shows, Oakridge events & shoots at Worlds End Western Club.</p>
+    <div class="mt-6 grid grid-cols-2 md:grid-cols-3 gap-3">
+      <img src="assets/gallery-1.jpg" alt="Gallery 1" class="w-full aspect-square object-cover rounded-xl" style="border:1px solid var(--line);" /><img src="assets/gallery-2.jpg" alt="Gallery 2" class="w-full aspect-square object-cover rounded-xl" style="border:1px solid var(--line);" /><img src="assets/gallery-3.jpg" alt="Gallery 3" class="w-full aspect-square object-cover rounded-xl" style="border:1px solid var(--line);" /><img src="assets/gallery-4.jpg" alt="Gallery 4" class="w-full aspect-square object-cover rounded-xl" style="border:1px solid var(--line);" /><img src="assets/gallery-5.jpg" alt="Gallery 5" class="w-full aspect-square object-cover rounded-xl" style="border:1px solid var(--line);" /><img src="assets/gallery-6.jpg" alt="Gallery 6" class="w-full aspect-square object-cover rounded-xl" style="border:1px solid var(--line);" /><img src="assets/gallery-7.jpg" alt="Gallery 7" class="w-full aspect-square object-cover rounded-xl" style="border:1px solid var(--line);" /><img src="assets/gallery-8.jpg" alt="Gallery 8" class="w-full aspect-square object-cover rounded-xl" style="border:1px solid var(--line);" /><img src="assets/gallery-9.jpg" alt="Gallery 9" class="w-full aspect-square object-cover rounded-xl" style="border:1px solid var(--line);" />
+    </div>
+  </div>
+</section>
+
+<section id="prices" class="section" style="border-top:1px solid var(--line);">
+  <div class="container px-4">
+    <h2 class="text-3xl font-bold logo-font" style="font-weight:600;">Prices</h2>
+    <p class="mt-2 muted">Guide pricing — custom quotes available.</p>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="card p-6">
+        <h3 class="font-semibold text-lg">Blankets</h3>
+        <ul class="mt-4 text-sm grid gap-2">
+          <li class="flex items-center justify-between"><span>Felt Blanket</span><span>£200</span></li>
+          <li class="flex items-center justify-between"><span>Ranch Blanket</span><span>£250</span></li>
+          <li class="flex items-center justify-between"><span>Contoured 2-in-1 Blanket</span><span>£300</span></li>
+          <li class="flex items-center justify-between"><span>Show Blanket</span><span>£250</span></li>
         </ul>
       </div>
-      <div class="relative">
-        <div class="aspect-[4/5] rounded-3xl bg-white shadow-inner border grid place-items-center overflow-hidden">
-          <div class="p-6 text-center">
-            <div class="w-full h-48 rounded-2xl border mb-4 grid place-items-center">Hero Image</div>
-            <p class="text-sm text-neutral-500">Swap this with Spartan modelling the orange show blanket or a shirt flatlay.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="border-t bg-white">
-    <div class="max-w-6xl mx-auto px-4 py-16 grid lg:grid-cols-2 gap-10 items-start">
-      <div>
-        <h2 class="text-3xl font-bold">Made to measure. Built to perform.</h2>
-        <p class="mt-4 text-neutral-600">
-          Western Show Ready creates bespoke show shirts, woven show blankets and ranch pieces for riders across the UK. Not all our clients compete — many just love Western style for trail riding and events.
-        </p>
-        <p class="mt-3 text-neutral-600">
-          We can customise existing shirts, upcycle statement pieces, and design looks for shoots at Worlds End Western Club or your chosen venue.
-        </p>
-        <div class="mt-6 flex gap-3">
-          <a href="#gallery" class="px-4 py-2 rounded-2xl border">See gallery</a>
-          <a href="#contact" class="px-4 py-2 rounded-2xl bg-neutral-900 text-white">Start a custom</a>
-        </div>
-      </div>
-      <div class="grid sm:grid-cols-2 gap-4">
-        <div class="rounded-3xl border p-5 shadow-sm bg-neutral-50">
-          <h3 class="font-semibold">Bespoke Show Shirts</h3>
-          <p class="text-sm text-neutral-600 mt-2">Handmade, one-of-a-kind pieces. Message for colourways & sizing.</p>
-        </div>
-        <div class="rounded-3xl border p-5 shadow-sm bg-neutral-50">
-          <h3 class="font-semibold">Ranch & Trail Shirts</h3>
-          <p class="text-sm text-neutral-600 mt-2">Everyday durability with show-ready detail.</p>
-        </div>
-        <div class="rounded-3xl border p-5 shadow-sm bg-neutral-50">
-          <h3 class="font-semibold">Show Blankets</h3>
-          <p class="text-sm text-neutral-600 mt-2">Woven colourways to match your outfit.</p>
-        </div>
-        <div class="rounded-3xl border p-5 shadow-sm bg-neutral-50">
-          <h3 class="font-semibold">Chaps & Chinx</h3>
-          <p class="text-sm text-neutral-600 mt-2">Custom leatherwork to finish the look.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SHOP / FEATURED -->
-  <section id="shop" class="bg-neutral-50 border-t">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <div class="flex items-end justify-between">
-        <h2 class="text-3xl font-bold">Featured styles</h2>
-        <p class="text-sm text-neutral-500">DM on Instagram to purchase</p>
-      </div>
-
-      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Repeatable product card -->
-        <!-- Replace placeholder 'Image' and price text -->
-        %PRODUCT_CARDS%
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section id="gallery" class="bg-white border-t">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-3xl font-bold">Gallery</h2>
-      <p class="mt-2 text-neutral-600">Looks from AQHA UK Breed Shows, Oakridge events & shoots at Worlds End Western Club.</p>
-      <div class="mt-6 grid grid-cols-2 md:grid-cols-3 gap-3">
-        %GALLERY%
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICES -->
-  <section id="prices" class="bg-neutral-50 border-t">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-3xl font-bold">Prices</h2>
-      <p class="mt-2 text-neutral-600">Guide pricing — custom quotes available.</p>
-      <div class="mt-6 grid md:grid-cols-2 gap-6">
-        <div class="rounded-3xl border bg-white p-6 shadow-sm">
-          <h3 class="font-semibold text-lg">Shirts</h3>
-          <ul class="mt-4 text-sm text-neutral-700 grid gap-2">
-            <li class="flex items-center justify-between"><span>Plain Shirts</span><span>£85</span></li>
-            <li class="flex items-center justify-between"><span>Collar & Cuffs + Bespoke Crystals</span><span>£125</span></li>
-            <li class="flex items-center justify-between"><span>Sheer Sleeves + Crystal Collar/Cuffs</span><span>£150</span></li>
-            <li class="flex items-center justify-between"><span>Show Vests / Jackets</span><span>POA</span></li>
-          </ul>
-        </div>
-        <div class="rounded-3xl border bg-white p-6 shadow-sm">
-          <h3 class="font-semibold text-lg">Accessories & More</h3>
-          <ul class="mt-4 text-sm text-neutral-700 grid gap-2">
-            <li class="flex items-center justify-between"><span>Bespoke Show Blankets</span><span>£250</span></li>
-            <li class="flex items-center justify-between"><span>Chaps</span><span>£399</span></li>
-            <li class="flex items-center justify-between"><span>Chinx</span><span>£399</span></li>
-          </ul>
-          <p class="text-xs text-neutral-500 mt-3">Prices are guides and may vary based on design & materials.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="bg-white border-t">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-3xl font-bold">Kind words</h2>
-      <div class="mt-6 grid md:grid-cols-3 gap-6">
-        <figure class="rounded-3xl border p-6 bg-neutral-50">
-          <blockquote class="text-sm text-neutral-700">“The fit was spot on and the crystals sparkled under the lights.”</blockquote>
-          <figcaption class="mt-3 text-xs text-neutral-500">— Client review</figcaption>
-        </figure>
-        <figure class="rounded-3xl border p-6 bg-neutral-50">
-          <blockquote class="text-sm text-neutral-700">“Katie turned my idea into reality so quickly — love my ranch shirt.”</blockquote>
-          <figcaption class="mt-3 text-xs text-neutral-500">— Client review</figcaption>
-        </figure>
-        <figure class="rounded-3xl border p-6 bg-neutral-50">
-          <blockquote class="text-sm text-neutral-700">“Beautiful workmanship and attention to detail. Will be back for more!”</blockquote>
-          <figcaption class="mt-3 text-xs text-neutral-500">— Client review</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="bg-neutral-900 text-white">
-    <div class="max-w-6xl mx-auto px-4 py-16 grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 class="text-3xl font-bold">Enquire / Order</h2>
-        <p class="mt-2 text-neutral-300">DM or email with your size, colours, discipline, and show date.</p>
-        <ul class="mt-6 text-sm text-neutral-300 grid gap-2">
-          <li>Instagram: <a class="underline" href="https://instagram.com/western_show_ready" target="_blank" rel="noreferrer">@western_show_ready</a></li>
-          <li>Instagram (Katie): <a class="underline" href="https://instagram.com/ukcowgirl2020" target="_blank" rel="noreferrer">@ukcowgirl2020</a></li>
-          <li>Email: <a class="underline" href="mailto:hello@westernshowready.co.uk">hello@westernshowready.co.uk</a></li>
+      <div class="card p-6">
+        <h3 class="font-semibold text-lg">Shirts & Scarves</h3>
+        <ul class="mt-4 text-sm grid gap-2">
+          <li class="flex items-center justify-between"><span>Pullover (Plain)</span><span>£90</span></li>
+          <li class="flex items-center justify-between"><span>Pullover - Heavy Crystals</span><span>£220</span></li>
+          <li class="flex items-center justify-between"><span>Taffeta Show Shirt (Plain)</span><span>£90</span></li>
+          <li class="flex items-center justify-between"><span>Taffeta w/ Crystals (Front/Cuff/Collar)</span><span>£170</span></li>
+          <li class="flex items-center justify-between"><span>Taffeta Show Shirt - Heavy Crystals with Swirls</span><span>£220</span></li>
+          <li class="flex items-center justify-between"><span>Plain Ranch Shirt</span><span>£100</span></li>
+          <li class="flex items-center justify-between"><span>Ranch Shirt w/ Contrasting Cuff/Collar</span><span>£120</span></li>
+          <li class="flex items-center justify-between"><span>Ranch Shirt w/ Fringe</span><span>£150</span></li>
+          <li class="flex items-center justify-between"><span>Cotton Show Shirt</span><span>£90</span></li>
+          <li class="flex items-center justify-between"><span>Scarf</span><span>£20</span></li>
         </ul>
       </div>
-      <!-- No backend required: mailto button opens email app -->
-      <form class="bg-white text-neutral-900 rounded-3xl p-6 border grid gap-4 shadow" onsubmit="return false;">
-        <div>
-          <label class="text-sm">Name</label>
-          <input class="mt-1 w-full border rounded-xl px-3 py-2" placeholder="Your name" />
-        </div>
-        <div>
-          <label class="text-sm">Email</label>
-          <input type="email" class="mt-1 w-full border rounded-xl px-3 py-2" placeholder="you@example.com" />
-        </div>
-        <div>
-          <label class="text-sm">Message</label>
-          <textarea class="mt-1 w-full border rounded-xl px-3 py-2" rows="4" placeholder="Tell me about your custom idea…"></textarea>
-        </div>
-        <a href="mailto:hello@westernshowready.co.uk" class="px-4 py-2 rounded-2xl bg-neutral-900 text-white text-center">Send via Email</a>
-        <p class="text-xs text-neutral-500">This button opens your email app to send your message.</p>
-      </form>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="border-t bg-white">
-    <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6 items-center">
-      <div class="text-sm text-neutral-500">© <span id="year"></span> Western Show Ready. Handmade in Hampshire, UK.</div>
-      <div class="text-sm text-neutral-500 text-center">WES • British Reining • AQHA UK</div>
-      <div class="text-sm text-neutral-500 md:text-right">Site by Katie × ChatGPT</div>
+<section id="contact" class="section" style="background:var(--ink); color:white;">
+  <div class="container grid lg:grid-cols-2 gap-10 items-center px-4">
+    <div>
+      <h2 class="text-3xl font-bold logo-font" style="font-weight:600;">Enquire / Order</h2>
+      <p class="mt-2" style="color:#ccc">DM or email with your size, colours, discipline, and show date.</p>
+      <ul class="mt-6 text-sm grid gap-2" style="color:#ddd">
+        <li>Instagram: <a class="underline" href="https://instagram.com/western_show_ready" target="_blank" rel="noreferrer">@western_show_ready</a></li>
+        <li>Instagram (Katie): <a class="underline" href="https://instagram.com/ukcowgirl2020" target="_blank" rel="noreferrer">@ukcowgirl2020</a></li>
+        <li>Email: <a class="underline" href="mailto:hello@westernshowready.co.uk">hello@westernshowready.co.uk</a></li>
+      </ul>
     </div>
-  </footer>
+    <form class="card text-neutral-900 rounded-3xl p-6 grid gap-4 shadow" onsubmit="return false;">
+      <div>
+        <label class="text-sm">Name</label>
+        <input class="mt-1 w-full border rounded-xl px-3 py-2" placeholder="Your name" />
+      </div>
+      <div>
+        <label class="text-sm">Email</label>
+        <input type="email" class="mt-1 w-full border rounded-xl px-3 py-2" placeholder="you@example.com" />
+      </div>
+      <div>
+        <label class="text-sm">Message</label>
+        <textarea class="mt-1 w-full border rounded-xl px-3 py-2" rows="4" placeholder="Tell me about your custom idea…"></textarea>
+      </div>
+      <a href="mailto:hello@westernshowready.co.uk" class="btn btn-primary text-center">Send via Email</a>
+      <p class="text-xs muted">This button opens your email app to send your message.</p>
+    </form>
+  </div>
+</section>
 
-  <script>
-    // mobile nav toggle
-    const btn = document.getElementById('menuBtn');
-    const nav = document.getElementById('mnav');
-    if (btn && nav) {
-      btn.addEventListener('click', () => {
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
-        nav.classList.toggle('hidden');
-      });
-    }
-    // year
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // populate placeholders
-    const productCard = (i) => `
-      <article class="rounded-3xl overflow-hidden border bg-white shadow-sm">
-        <div class="aspect-[4/3] grid place-items-center">Image ${i}</div>
-        <div class="p-5">
-          <h3 class="font-semibold">Product name</h3>
-          <p class="text-sm text-neutral-600">Short description or colourway.</p>
-          <div class="mt-3 flex items-center justify-between">
-            <span class="text-sm font-medium">From £•••</span>
-            <a href="#contact" class="text-sm underline">Enquire</a>
-          </div>
-        </div>
-      </article>
-    `;
-    const galleryCell = (i) => `<div class="aspect-square rounded-2xl border bg-neutral-100 grid place-items-center text-sm">Photo ${i}</div>`;
-    document.body.innerHTML = document.body.innerHTML
-      .replace('%PRODUCT_CARDS%', Array.from({length: 6}, (_,i)=>productCard(i+1)).join(''))
-      .replace('%GALLERY%', Array.from({length: 9}, (_,i)=>galleryCell(i+1)).join(''));
-  </script>
+<footer style="border-top:1px solid var(--line); background:white;">
+  <div class="container px-4 py-10 grid md:grid-cols-3 gap-6 items-center">
+    <div class="text-sm muted">© <span id="year"></span> Western Show Ready. Handmade in Hampshire, UK.</div>
+    <div class="text-sm text-center muted">WES • British Reining • AQHA UK</div>
+    <div class="text-sm md:text-right muted">Site by Katie × ChatGPT</div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
