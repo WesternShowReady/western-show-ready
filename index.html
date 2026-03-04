@@ -21,7 +21,10 @@
       --accent-dark:#8A6B34;
       --card:#FFFFFF;
     }
-    html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; color:var(--ink);}
+    html,body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      color:var(--ink);
+    }
     .btn{display:inline-block; padding:.7rem 1.1rem; border-radius:1rem; font-weight:600;}
     .btn-primary{background:var(--accent); color:#fff; border:1px solid var(--accent);}
     .btn-primary:hover{background:var(--accent-dark);}
@@ -32,6 +35,8 @@
     .container{max-width:72rem; margin:0 auto;}
     .kicker{color:var(--accent); font-weight:700; letter-spacing:.06em; text-transform:uppercase; font-size:.8rem;}
     .muted{color:var(--muted);}
+    .soft-border{border-color:var(--line);}
+
     @font-face{
       font-family:"Brock Script";
       src:url("brock.woff2") format("woff2");
@@ -45,12 +50,12 @@
 
 <header class="nav sticky top-0 z-50">
   <div class="container px-4 py-3 flex items-center justify-between">
-    <a href="#home" class="flex items-center gap-3">
-      <!-- Bigger logo -->
-      <img src="logo.png" alt="Western Show Ready logo" class="w-24 h-24 object-contain" />
+    <a href="#home" class="flex items-center gap-4">
+      <!-- BIGGER LOGO -->
+      <img src="logo.png" alt="Western Show Ready logo" class="w-28 h-28 object-contain" />
       <div>
-        <p class="logo-font" style="font-size:2.3rem; line-height:1;">Western Show Ready</p>
-        <p class="text-sm muted" style="margin-top:.15rem;">Custom cowgirl. One of a kind.</p>
+        <p class="text-xl logo-font" style="font-size:2.2rem; line-height:1;">Western Show Ready</p>
+        <p class="text-sm muted -mt-1">Custom cowgirl. One of a kind.</p>
       </div>
     </a>
 
@@ -75,12 +80,10 @@
       <p class="mt-4 text-lg muted">
         One-of-a-kind looks for reining, ranch & cow work — plus everyday trail style.
       </p>
-
       <div class="mt-6 flex flex-wrap gap-3">
-        <a href="#gallery" class="btn btn-primary">See gallery</a>
-        <a href="#contact" class="btn btn-ghost">Start a custom</a>
+        <a href="#gallery" class="btn btn-primary">View styles</a>
+        <a href="#contact" class="btn btn-ghost">Custom enquiry</a>
       </div>
-
       <ul class="mt-6 text-sm muted grid gap-1">
         <li>• Hand-finished crystals & detailing</li>
         <li>• Matching neck ties & accessories</li>
@@ -88,14 +91,10 @@
       </ul>
     </div>
 
-    <!-- HERO IMAGE (restored) -->
+    <!-- HERO IMAGE (uses a file that exists in your repo) -->
     <div class="relative">
-      <div class="card overflow-hidden" style="border-radius:1.5rem;">
-        <!-- Use an image that already exists in your repo -->
-        <img src="Kaiarosie.jpg" alt="Western Show Ready design" class="w-full h-[420px] object-cover" />
-      </div>
-      <div class="mt-4 text-sm muted">
-        Featured: show-ready detail & one-of-a-kind finishes.
+      <div class="card overflow-hidden">
+        <img src="cowgirl.jpg" alt="Western Show Ready look" class="w-full h-[420px] object-cover" />
       </div>
     </div>
   </div>
@@ -107,16 +106,13 @@
     <div>
       <div class="kicker">About</div>
       <h2 class="text-3xl font-bold logo-font" style="font-weight:600;">Made to measure. Built to perform.</h2>
-
       <p class="mt-4 muted">
         Western Show Ready creates bespoke show shirts, woven show blankets and ranch pieces for riders across the UK.
         Not all our clients compete — many just love Western style for trail riding and events.
       </p>
-
       <p class="mt-3 muted">
         We can customise existing shirts, upcycle statement pieces, and design looks for shoots at Worlds End Western Club or your chosen venue.
       </p>
-
       <div class="mt-6 flex gap-3">
         <a href="#gallery" class="btn btn-ghost">See gallery</a>
         <a href="#contact" class="btn btn-primary">Start a custom</a>
@@ -124,41 +120,31 @@
     </div>
 
     <div class="grid sm:grid-cols-2 gap-4">
-      <div class="card p-5">
-        <h3 class="font-semibold">Bespoke Show Shirts</h3>
-        <p class="text-sm mt-2 muted">Handmade, one-of-a-kind pieces.</p>
-      </div>
-      <div class="card p-5">
-        <h3 class="font-semibold">Ranch & Trail Shirts</h3>
-        <p class="text-sm mt-2 muted">Durable with show-ready detail.</p>
-      </div>
-      <div class="card p-5">
-        <h3 class="font-semibold">Show Blankets</h3>
-        <p class="text-sm mt-2 muted">Colourways to match your outfit.</p>
-      </div>
-      <div class="card p-5">
-        <h3 class="font-semibold">Accessories</h3>
-        <p class="text-sm mt-2 muted">Scarves & matching ties.</p>
-      </div>
+      <div class="card p-5"><h3 class="font-semibold">Bespoke Show Shirts</h3><p class="text-sm mt-2 muted">Handmade, one-of-a-kind pieces.</p></div>
+      <div class="card p-5"><h3 class="font-semibold">Ranch & Trail Shirts</h3><p class="text-sm mt-2 muted">Durable with show-ready detail.</p></div>
+      <div class="card p-5"><h3 class="font-semibold">Show Blankets</h3><p class="text-sm mt-2 muted">Colourways to match your outfit.</p></div>
+      <div class="card p-5"><h3 class="font-semibold">Accessories</h3><p class="text-sm mt-2 muted">Scarves & matching ties.</p></div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY (Instagram) -->
+<!-- GALLERY (INSTAGRAM EMBED ONLY) -->
 <section id="gallery" class="section" style="border-top:1px solid var(--line);">
   <div class="container px-4">
     <h2 class="text-3xl font-bold logo-font" style="font-weight:600;">Design Gallery</h2>
     <p class="muted mt-2">Latest Western Show Ready designs from Instagram.</p>
 
-    <div class="mt-6 card overflow-hidden" style="border-radius:1.5rem;">
+    <div class="mt-6 card overflow-hidden" style="padding:14px;">
+      <!-- SnapWidget embed -->
       <iframe
         src="https://snapwidget.com/embed/1032140"
         class="snapwidget-widget"
         allowtransparency="true"
         frameborder="0"
         scrolling="no"
-        style="border:none; overflow:hidden; width:100%; height:900px;">
-      </iframe>
+        style="border:none; overflow:hidden; width:100%; height:900px;"
+        title="Western Show Ready Instagram Gallery"
+      ></iframe>
     </div>
 
     <div class="mt-4">
@@ -193,7 +179,7 @@
           <li class="flex items-center justify-between"><span>Pullover - Heavy Crystals</span><span>£220</span></li>
           <li class="flex items-center justify-between"><span>Taffeta Show Shirt (Plain)</span><span>£90</span></li>
           <li class="flex items-center justify-between"><span>Taffeta w/ Crystals (Front/Cuff/Collar)</span><span>£170</span></li>
-          <li class="flex items-center justify-between"><span>Taffeta - Heavy Crystals with Swirls</span><span>£220</span></li>
+          <li class="flex items-center justify-between"><span>Taffeta Show Shirt - Heavy Crystals with Swirls</span><span>£220</span></li>
           <li class="flex items-center justify-between"><span>Plain Ranch Shirt</span><span>£100</span></li>
           <li class="flex items-center justify-between"><span>Ranch Shirt w/ Contrasting Cuff/Collar</span><span>£120</span></li>
           <li class="flex items-center justify-between"><span>Ranch Shirt w/ Fringe</span><span>£150</span></li>
@@ -232,7 +218,6 @@
         <label class="text-sm">Message</label>
         <textarea class="mt-1 w-full border rounded-xl px-3 py-2" rows="4" placeholder="Tell me about your custom idea…"></textarea>
       </div>
-
       <a href="mailto:hello@westernshowready.co.uk" class="btn btn-primary text-center">Send via Email</a>
       <p class="text-xs muted">This button opens your email app to send your message.</p>
     </form>
